@@ -12,4 +12,8 @@ class OrderDetail extends Model
     protected $primaryKey = 'orderNumber';
     public $incrementing = false;
     public $timestamps = false;
+
+    public function product() {
+        return $this->belongsTo(Product::class, 'productCode', 'productCode');
+    }
 }
