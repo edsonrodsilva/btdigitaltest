@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\OrderController;
 
-Route::get('orders', [OrdersController::class, 'index']);
-Route::get('orders/{id}', [OrdersController::class, 'show']);
-Route::post('orders', [OrdersController::class, 'store']);
-Route::put('orders/{id}', [OrdersController::class, 'update']);
-Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
+Route::get('orders', [OrderController::class, 'index']);
+Route::get('orders/{orderNumber}', [OrderController::class, 'show']);

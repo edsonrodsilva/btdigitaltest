@@ -7,9 +7,17 @@ use Illuminate\Http\Request;
 interface OrderRepositoryInterface
 {
     /**
-     * Returns a pageable list of all customer's orders. The default page size is 10.
-     * @method  GET api/customers/{customer_id}/orders
+     * Get all orders
+     * @method  GET api/orders
      * @access  public
      */
-    public function getAllOrdersByCustomer($customerNumber);
+    public function getAllOrders();
+
+    /**
+     * Get Customer By orderNumber
+     * @param   integer     $orderNumber
+     * @method  GET api/orders/{orderNumber}
+     * @access  public
+     */
+    public function getOrdersByOrderNumber($orderNumber);
 }

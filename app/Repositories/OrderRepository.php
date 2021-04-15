@@ -13,19 +13,35 @@ class OrderRepository implements OrderRepositoryInterface
     use ResponseApiTrait;
 
     /**
-     * Returns a pageable list of all customer's orders. The default page size is 10.
-     * @param $customerNumber
-     * @return collection
+     * Get all orders
+     * @method  GET api/orders
+     * @access  public
+     * @throws \Exception
      */
-    public function getAllOrdersByCustomer($customerNumber) {
+    public function getAllOrders(){
         try {
-            $orders = Order::where('customerNumber', $customerNumber)->paginate(10);
+            $orders = Order::paginate(10);
 
-            //Check the order exits
-            if (!$orders) return $this->error("No order with customer $customerNumber", 204);
+            return $this->success('All Orders', $orders, 200);
+        } catch (Exception $e) {
+            return $this->error($e->getMessage(), $e->getCode());
+        }
+    }
 
-            return $this->success("Orders of customer", $orders, 200);
+    /**
+     * Get Order By orderNumber
+     * @param   integer     $orderNumber
+     * @method  GET api/orders/{orderNumber}
+     * @access  public
+     */
+    public function getOrdersByOrderNumber($orderNumber) {
+        try {
+            $order = Order::find($orderNumber);
 
+            //Check the order
+            if (!$order) return $this->error("No order with orderNumber $orderNumber", 204);
+
+            return $this->success("Order detail", $order, 200);
         } catch (Exception $e) {
             return $this->error($e->getMessage(), $e->getCode());
         }

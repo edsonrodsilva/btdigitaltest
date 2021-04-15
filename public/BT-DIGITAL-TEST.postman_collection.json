@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "e4b6fb45-bec8-4885-9e73-e7997e1a461e",
+		"name": "BT-DIGITAL-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ORDERS",
+			"item": [
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/orders/10102",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"10102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrdersByOrderNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/orders/10102",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"10102"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CUSTOMERS",
+			"item": [
+				{
+					"name": "getAllOrdersByCustomerNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/customers/119/orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"119",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerByCustomerNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/customers/119",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"119"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/customers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REPORTS",
+			"item": [
+				{
+					"name": "getCustomersCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/reports/customers/country",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"customers",
+								"country"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
