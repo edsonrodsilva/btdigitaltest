@@ -43,17 +43,32 @@ Criar uma API que contenha as seguintes Resources
 <!--ts-->
     1 - clone o projeto
     2 - Entre na pasta do projeto.
-    3 - Instale as dependencias usando o comando.
+    3 - Instale as dependências usando o comando.
     composer install
     4 - use o script sql que se encontra na raís do projeto para inportar o banco de dados.
     5- Configure o arquivo .env com as credenciais do banco de dados.
     6 - levante o servidor usando o comando.
     php artisan serve
-    7- Test a API usando Insomnia ou Postman para acessar os recursos listados abaixo.        
+    7- Test a API usando Insomnia ou Postman para acessar os recursos listados abaixo.
 <!--te-->
+
 
 ## Baixe aqui a collections do postman
 [< Postman Collection >](https://www.postman.com/collections/df6e23c297d40e1e783b)
+
+
+## Testes realizados
+### 1 - Ver todas as ordens com detalhe de um determinado cliente.
+![Screenshot](/public/images/getAllOrdersByCustomerNumber.png)
+
+
+### 2 - Retornar a ficha de um cliente com todos os campos contidos na tabela “customers”, exceto o campo “creditLimit” e com o nome do colaborador responsável pela ficha dele.
+![Screenshot](/public/images/getAllOrdersByCustomerNumber.png)
+
+
+### 3 - Retornar a quantidade de clientes exibindo o nome da capital de cada país. Para conseguir a capital, utilize a api GET “https://restcountries.eu/rest/v2/name/{NOME_PAIS}” 
+![Screenshot](/public/images/getCustomersCountry.png)
+
 
 ## Tecnologias e ferramentas
 <!--ts-->    
