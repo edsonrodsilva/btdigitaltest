@@ -2,13 +2,12 @@
 # BT-DIGITAL
 **Back-End**
 
-Criar uma API que contenha as seguintes Resources e suas rotas
+Criar uma API RESTful
 *API RESTful*
 
 Existem inúmeras formas de deixar seu aplicativo com uma estrutura pronta para evolução, com funcionalidade comum de acesso a dados, fornecendo melhor capacidade de manutenção e desacoplando a infraestrutura ou tecnologia usada para acessar bancos de dados da camada de modelo de domínio.
 
 ## Features
-Back-End
 Criar uma API que contenha as seguintes Resources
 
     1. Ver todas as ordens com detalhe de um determinado cliente.
@@ -22,7 +21,7 @@ Criar uma API que contenha as seguintes Resources
 
 
 ## Cronagrama de desenvolvimento
-![Screenshot](/public/images/cronagrama_de_desenvolvimento.png)
+![Screenshot](/public/images/cronograma_de_desenvolvimento.png)
 
 
 ## Rotas
