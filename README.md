@@ -2,10 +2,9 @@
 # BT-DIGITAL
 **Back-End**
 
-Criar uma API RESTful
-*API RESTful*
+Criar uma *API RESTful*
 
-Existem inúmeras formas de deixar seu aplicativo com uma estrutura pronta para evolução, com funcionalidade comum de acesso a dados, fornecendo melhor capacidade de manutenção e desacoplando a infraestrutura ou tecnologia usada para acessar bancos de dados da camada de modelo de domínio.
+Existem inúmeras formas de deixar seu aplicativo com uma estrutura pronta para evolução, com funcionalidade comum de acesso a dados, fornecendo melhor capacidade de manutenção e desacoplando a infraestrutura ou tecnologia usada para acessar bancos de dados da camada de modelo de domínio. A opção abordada aqui é o Repository Pattern.
 
 ## Features
 Criar uma API que contenha as seguintes Resources
