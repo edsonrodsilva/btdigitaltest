@@ -17,4 +17,9 @@ class Employer extends Model
     public function office() {
         return $this->belongsTo(Office::class, 'officeCode', 'officeCode');
     }
+
+    public function getReportsTo() {
+        return $this->belongsTo(Employer::class, 'reportsTo', 'employeeNumber');
+    }
+
 }

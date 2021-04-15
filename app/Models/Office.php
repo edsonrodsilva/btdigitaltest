@@ -8,8 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Office extends Model
 {
     use HasFactory;
+
     protected $table = 'offices';
     protected $primaryKey = 'officeCode';
     public $incrementing = false;
     public $timestamps = false;
+
+    //primary key is not an integer,
+    protected $keyType = 'string';
 }

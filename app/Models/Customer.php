@@ -14,6 +14,25 @@ class Customer extends Model
     public $incrementing = false;
     public $timestamps = false;
 
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'creditLimit'
+    ];
+
+    /**
+     * Get the customer's full name.
+     *
+     * @return string
+     */
+    public function getFullNameAttribute()
+    {
+        return "{$this->firstName} {$this->lastName}";
+    }
+
     public function employer() {
         return $this->belongsTo(Employer::class, 'salesRepEmployeeNumber', 'employeeNumber');
     }

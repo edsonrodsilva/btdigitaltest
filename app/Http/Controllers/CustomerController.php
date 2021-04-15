@@ -3,10 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Repositories\CustomerRepositoryInterface;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+    private $customerRepository;
+
+    public function __construct(CustomerRepositoryInterface $customerRepository)
+    {
+        return $this->customerRepository = $customerRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,18 +22,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return $this->customerRepository->getAllCustomers();
     }
 
     /**
@@ -34,21 +31,9 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show(Customer $customer)
+    public function show($customerNumber)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Customer  $customer
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Customer $customer)
-    {
-        //
+        return $this->customerRepository->getCustomerByCustomerNumber($customerNumber);
     }
 
     /**
@@ -57,8 +42,20 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy($customerNumber)
     {
-        //
+        return $this->customerRepository->deleteCustomer($customerNumber);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getCustomersCountry()
+    {
+        return $this->customerRepository->getCustomersCountry();
+    }
+
+
 }

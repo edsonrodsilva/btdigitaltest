@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDetail extends Model
 {
     use HasFactory;
+
     protected $table = 'orderdetails';
     protected $primaryKey = 'orderNumber';
     public $incrementing = false;
